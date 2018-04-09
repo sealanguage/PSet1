@@ -8,6 +8,7 @@ int main(void)
     //convert dollar to cents * 100   round
     float n;
     int coins = 0;
+    int change = get_int("Change: ");
 
     do
     {
@@ -15,7 +16,7 @@ int main(void)
         n = n * .01;
     }
     while (n < 0);     // just accept positive values
-    printf("storing variable %f ", coins);
+    printf("storing variable ", n);
 
 // always use largest coin possible, how many coins can be returned
     do
@@ -26,7 +27,7 @@ int main(void)
             //  while (quarters can be used)
                 //     increase count
                 //coins = n++;
-                printf("storing value of coins \n", n);
+                printf("storing value of coins %f\n", );
                 //     decrease amount by .25
                 //n - .25
         }
