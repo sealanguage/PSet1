@@ -6,33 +6,43 @@ int main(void)
 {
     // prompt user for amount in dollars, validate amount, dollars, use get_float
     //convert dollar to cents * 100   round
-    float n;
+    float change;
+    float changeOwed;
     int coins = 0;
+    int quarter = 25;
+    // int dime = 10;
+    // int nickle = 5;
+    // int pennie = 1;
     //int change = get_int("Change: ");
 
     do
     {
-        n = get_float("Change owed: ");
-        n = n * .01;
+        change = get_float("Change owed: ");
+        changeOwed = change * 100;
     }
-    while (n < 0);     // just accept positive values
-    printf("storing variable %d\n", coins);
+    while (change > 0);     // just accept positive values
+    //printf("storing variable %.0f\n", changeOwed);
 
 // always use largest coin possible, how many coins can be returned
-    do
-    {
+
         //store the remainder n plus store the increment c
-        for (n = .25; n >= .25; n++)
-        {
-            //  while (quarters can be used)
-                //     increase count
-                //coins = n++;
-                printf("storing value of coins %f\n", n);
-                //     decrease amount by .25
-                //n - .25
-        }
-    }
-    while (n > .25);
+        //while (quarters can be used)
+
+        while(changeOwed >= quarter)
+
+            {
+            //   increase coin count
+                (coins++);
+                printf("adding a coin");
+            //     decrease amount by .25
+
+                //printf("subtracting 25 from changeOwed", changeOwed);
+                changeOwed -= quarter;
+                //printf("storing value of coins %f\n", n);
+
+            }
+
+    //while (n > .25);
 //
 
 

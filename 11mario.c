@@ -25,15 +25,13 @@ int main(void)
                 for (int j = 0; j < number - i - 1; j++)
                     {
                         printf("* ");
+                        // loop 3 to fill in pyramid #
                         for (int k = 0; k < i + 2; k++)
-                        {
-                            printf("# ");
-                        }
+                            {
+                                printf("# ");
+                            }
+                        printf(" afterloops\n ");
                     }
-                printf("after loops\n ");
             }
-
-
-
     }
 }
