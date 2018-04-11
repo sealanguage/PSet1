@@ -9,7 +9,7 @@ int main(void)
     float change;
     float changeOwed;
     int coins = 0;
-    int quarter = 25;
+    //int quarter = 25;
     // int dime = 10;
     // int nickle = 5;
     // int pennie = 1;
@@ -20,30 +20,50 @@ int main(void)
         // get amount in dollars
         change = get_float("Change owed: ");
         changeOwed = change * 100;
-        printf("reading change owed value%f0\n", changeOwed);
-
+        // returning cents for decimal working so don't change this
+        //printf("reading change owed value %.f\n", changeOwed);
     }
-    while (changeOwed > 0);// just accept positive values
-    printf("storing variable %.0f\n", changeOwed);
-    printf("quarter: ");
+        while(change == 0.00);
 
-        //  while (quarters can be used)
-        for (int i = 0; i > quarter; i++)
-            // for (int j = 0; j >= 25; j++)
+
+    while (changeOwed >= 25)   // just accept positive values
+        {
+            //  while (quarters can be used)
+            //  increase count
+            coins++;
+            //  decrease amount by 25
+            changeOwed = changeOwed - 25;
+        }
+        while (changeOwed >= 10)   // just accept positive values
             {
-                 //  increase count
-            coins = coins + 1;
-            printf("reading quarters%d\n", i);
-            //  decrease amount by .25
-            changeOwed = (changeOwed - quarter);
-            printf("changeOwed: %f\n", changeOwed);
-
+                //  while (dimes can be used)
+                //  increase count
+                coins++;
+                //  decrease amount by 10
+                changeOwed = changeOwed - 10;
             }
-
-
-
+            while (changeOwed >= 5)   // just accept positive values
+                {
+                    //  while (nickles can be used)
+                    //  increase count
+                    coins++;
+                    //  decrease amount by 5
+                    changeOwed = changeOwed - 5;
+                }
+                while (changeOwed >= 1)   // just accept positive values
+                {
+                    //  while (pennies can be used)
+                    //  increase count
+                    coins++;
+                    //  decrease amount by 1
+                    changeOwed = changeOwed - 1;
+                }
+        printf("%i\n", coins);
 
 }
+
+//  printf("storing variable changeOwed");
+//     printf("quarter: ")
 
 //  creating a greedy algorithm, a globally optimized solution
     //  get amount in dollars
