@@ -9,11 +9,6 @@ int main(void)
     float change;
     float changeOwed;
     int coins = 0;
-    //int quarter = 25;
-    // int dime = 10;
-    // int nickle = 5;
-    // int pennie = 1;
-    //int change = get_int("Change: ");
 
     do
     {
@@ -62,8 +57,6 @@ int main(void)
 
 }
 
-//  printf("storing variable changeOwed");
-//     printf("quarter: ")
 
 //  creating a greedy algorithm, a globally optimized solution
     //  get amount in dollars
